@@ -33,3 +33,10 @@ If the value is not empty it will be enforced for all connections.
 Mentioning only an IPv4 prefix will thus deny all IPv6 connections and vice
 versa. Use ``0.0.0.0/0`` (IPv4) or ``::/0`` (IPv6) to allow all connections on
 that address family.
+
+There is a ! (not) paramater in order you want to exclude this device
+to connect via a subnet.
+Set the allowed subnets to !10.10.0.0/16, 0.0.0.0/0 for the device in question
+to connect to all netrowks,
+but not using your VPN in the range 10.10.something.something
+The order matters here, former mask beats the later ones.
